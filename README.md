@@ -6,9 +6,9 @@ In the IBM Cloud Dashboard create an instance of the [IoT Platform Starter](http
 
 Perform the following steps to deploy the IoT Starter:
 
-1.   Create the boilerplate:
+1.   Create an instance of the Starter Kit:
 
-        a. Log in to or register for IBM Cloud at https://www.bluemix.net.
+        a. Log in to or register for IBM Cloud at https://cloud.ibm.com.
 
         b. Open the catalog by selecting the catalog tab.
 
@@ -34,15 +34,23 @@ Note: The staging process might take a few minutes.
 
 ## Register an IoT Device
 
-Complete the following steps to simulate a scenario that uses a thermostat to monitor temperature and humidity of a room.
+Complete the following steps to prepare  a scenario that uses a simulated thermostat to monitor temperature and humidity of a room.
 
-1.   Launch the Watson IoT Platform dashboard.
+1.   Launch the IoT Platform dashboard.
 
-        a. Scroll to the Services section and click the name of your Watson IoT Platform instance. The instance name usually ends with -iotf-service.
+        a. In the Resource list in the Services section click the name of your IoT Platform instance. The instance name usually ends with -iotf-service.
 
-        b. Click Launch Dashboard to open the Watson IoT Platform dashboard in a new browser tab.
+        b. Click Launch button to open the IoT Platform dashboard in a new browser tab.
 
-2.   Create a device type.
+ 2. Make TLS optional
+      
+      TLS is enforced for connection security by default (good thing for a production environment) but for the sake of simplicity we are going to make TLS optional for this workshop.
+
+      a. In the menu on the left side click Security, then on the Edit icon for connection security.
+
+      b. For Scope Default, select Security Level 'TLS Optional', then click Save in the upper right corner.
+
+3.   Create a device type.
 
         a. From the main menu, select Devices, and then click Add Device.
 
@@ -55,7 +63,7 @@ Complete the following steps to simulate a scenario that uses a thermostat to mo
 
         d.  Click Create to add the device type.
 
-3.   Add a device that uses the newly created device type.
+4.   Add a device that uses the newly created device type
 
        a. On the Add Device page, the device type that you just created is displayed in the list of device types. Click Next to add a device that uses that device type.
 
