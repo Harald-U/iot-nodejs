@@ -32,6 +32,7 @@ After the application is deployed, the Getting Started with Watson IoT Platform 
         
 Note: The staging process might take a few minutes.
 
+## Register an IoT Device
 
 Complete the following steps to simulate a scenario that uses a thermostat to monitor temperature and humidity of a room.
 
@@ -72,6 +73,8 @@ Complete the following steps to simulate a scenario that uses a thermostat to mo
         * Device Type
         * Device ID
         * Authentication Token (= Password)
+
+## Run the IoT Simulator 
 
 On your workstation:
 
