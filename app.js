@@ -13,8 +13,9 @@ console.log("URL: "+host);
 var options={
         clientId:"d:"+localCfg.ORG+":"+localCfg.DEVICE_TYPE+":"+localCfg.DEVICE_ID,
         username:"use-token-auth",
-        password:"Passw0rd"
+        password:localCfg.PASSWORD
         };
+console.log("Options: ", options);       
 var client  = mqtt.connect(host, options);
     client.on("connect",function(){	
     console.log("Client connected  "+client.connected);

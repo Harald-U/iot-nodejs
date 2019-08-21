@@ -2,6 +2,19 @@
 
 ## Prereq
 
+### Node.js
+
+On your workstation you need to install Node.js (and npm which is typically part of the node.js installation). The packages can be found [here](https://nodejs.org/en/download/). Install the LTS version. Test if the installation was successful with:
+
+```
+$ node -v
+$ npm -v
+```
+
+Result is the version of both executables.
+
+### IBM Cloud IoT Platform Starter
+
 In the IBM Cloud Dashboard create an instance of the [IoT Platform Starter](https://cloud.ibm.com/docs/IoT-starter?topic=iot-starter-gettingstartedtemplate).
 
 Perform the following steps to deploy the IoT Starter:
@@ -38,7 +51,7 @@ Complete the following steps to prepare  a scenario that uses a simulated thermo
 
 1.   Launch the IoT Platform dashboard.
 
-        a. In the Resource list in the Services section click the name of your IoT Platform instance. The instance name usually ends with -iotf-service.
+        a. In the Resource list in the Cloud Foundry Services section click the name of your IoT Platform instance. The instance name usually ends with -iotf-service.
 
         b. Click Launch button to open the IoT Platform dashboard in a new browser tab.
 
@@ -46,41 +59,44 @@ Complete the following steps to prepare  a scenario that uses a simulated thermo
       
       TLS is enforced for connection security by default (good thing for a production environment) but for the sake of simplicity we are going to make TLS optional for this workshop.
 
-      a. In the menu on the left side click Security, then on the Edit icon for connection security.
+      a. In the menu on the left side click Security, then on the Edit icon for Connection Security.
 
-      b. For Scope Default, select Security Level 'TLS Optional', then click Save in the upper right corner.
+      b. For scope Default, select Security Level 'TLS Optional'. Click OK on the Warning pop-up. Then click Save in the upper right corner.
 
 3.   Create a device type.
 
-        a. From the main menu, select Devices, and then click Add Device.
+        a. From the main menu, select Devices.
 
-        b. In the Add Device page, click Create device type.
+        b. Open the Device Types tab (from: Browse | Action | Device Types | Interfaces)
 
-        c. In the Create Device Type page, click Create device type.
-        Enter a unique name and description for your device type, and click Next.
+        c. Click  Add Device Type, 
+        Enter a unique name (e.g. "simulator") and description for your device type, and click Next.
 
         (optional) Defining a Template and Metadata on the next two pages is optional and can be safely skipped by clicking Next on each page.
 
-        d.  Click Create to add the device type.
+        d.  Click Finish to add the device type.
 
 4.   Add a device that uses the newly created device type
 
-       a. On the Add Device page, the device type that you just created is displayed in the list of device types. Click Next to add a device that uses that device type.
+       a. Click Register Devices. The device type that you just created is displayed in the list of device types.
 
-       b. Enter a unique device ID (for example, LivingRoomThermo1).
+       b. Enter a unique Device ID (e.g. "sim-1"). Click Next.
 
         (optional) Providing descriptive data on the Add Device page or entering device metadata on the next page is optional, and you can safely skip those pages by clicking Next on each page.
 
-        c.  On the Security page, click Next to generate an authentication token for your device.
+        c.  On the Security page, enter an Authentication Token = password for your new device, then click Next.
 
-        d. On the Summary page, verify that the information is correct and click Add to add the device. Click Back to return to a previous page.
+        d. On the Summary page, verify that the information is correct and click Finish to add the device. 
          
-    Make a note of the information that is displayed in the Your Device Credentials page. 
-    You need the following information to configure the simulator and display the data:
+ Make a note of the information that is displayed in the Your Device Credentials page. 
+You need the following information to configure the simulator and display the data:
+
         * Organization ID
         * Device Type
         * Device ID
         * Authentication Token (= Password)
+
+Keep this page open in your browser, but go to Recent Events or State. They will be empty for now.
 
 ## Run the IoT Simulator 
 
@@ -137,5 +153,8 @@ Publishing {"d":{"temp":18.5,"humidity":61}}
 Publishing {"d":{"temp":20,"humidity":68}}
 Publishing {"d":{"temp":21.5,"humidity":65}}
 ```
+
+Go back to your browser which should still display your device in the IoT Platform Dashboard. On the Recent Events or State section you should see your messages coming in every 5 seconds.
+
 
 
