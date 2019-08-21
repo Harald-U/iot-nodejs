@@ -27,6 +27,8 @@ Perform the following steps to deploy the IoT Starter:
 
         c. Select the Starter Kits  category and there select the Internet of Things Platform Starter.
 
+        ![Starter](media/CreateStarter.png)
+
         d. On the Create a Cloud Foundry App page, enter a unique
 
             App Name
@@ -63,6 +65,8 @@ Complete the following steps to prepare  a scenario that uses a simulated thermo
 
       b. For scope Default, select Security Level 'TLS Optional'. Click OK on the Warning pop-up. Then click Save in the upper right corner.
 
+      ![TLS Optional](media/TLSOptional.png)
+
 3.   Create a device type.
 
         a. From the main menu, select Devices.
@@ -71,6 +75,8 @@ Complete the following steps to prepare  a scenario that uses a simulated thermo
 
         c. Click  Add Device Type, 
         Enter a unique name (e.g. "simulator") and description for your device type, and click Next.
+
+        ![Device Type](media/CreateDeviceType.png)
 
         (optional) Defining a Template and Metadata on the next two pages is optional and can be safely skipped by clicking Next on each page.
 
@@ -156,5 +162,5 @@ Publishing {"d":{"temp":21.5,"humidity":65}}
 
 Go back to your browser which should still display your device in the IoT Platform Dashboard. On the Recent Events or State section you should see your messages coming in every 5 seconds.
 
-
+![MQTT Received](media/MQTTMessages.png)
 
