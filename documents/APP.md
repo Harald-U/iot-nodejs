@@ -14,7 +14,7 @@ We use some simple Node.js code in this repository to connect to the IoT Platfor
     $ cd iot-nodejs/iot-app
     ```
     
-3. Create the config .json configuration file:
+3. Create the config.json configuration file:
     ```
     $ cp template.config.json config.json
    ```
@@ -72,4 +72,4 @@ We use some simple Node.js code in this repository to connect to the IoT Platfor
     ![MQTT Received](images/MQTTMessages.png)
     
 
-__Continue with [Node-RED on IBM Cloud](documents/NODERED.md)__   
+__Continue with [Node-RED on IBM Cloud](NODERED.md)__   
