@@ -72,4 +72,4 @@ We use some simple Node.js code in this repository to connect to the IoT Platfor
     ![MQTT Received](images/MQTTMessages.png)
     
 
-__Continue with []()__   
+__Continue with [Node-RED on IBM Cloud](documents/NODERED.md)__   

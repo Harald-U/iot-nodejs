@@ -6,7 +6,7 @@
 
 You need to register for an IBM Cloud Account. A so called Lite account which is free of charge will do. Register at [https://cloud.ibm.com](https://cloud.ibm.com).
 
-After registration check your emails. To complete the registration you will need to click a link in a verification email that will be sent to email account you used for registration. If you don't receive this email check your spam folder.
+After registration check your emails. To complete the registration you will need to click a link in a verification email that will be sent to the email account you used for registration. If you don't receive this email check your spam folder.
 
 ### Node.js
 
@@ -23,9 +23,9 @@ Result is the version of both executables.
 
 __Continue here:__
 
-* [IBM Cloud Internet of Things Platform Service](IOTP.md)
-* [IoT Simulator](APP.md)
-* [Node-RED on IBM Cloud](NODERED.md)
+1. [IBM Cloud Internet of Things Platform Service](documents/IOTP.md)
+2. [IoT Simulator](documents/APP.md)
+3. [Node-RED on IBM Cloud](documents/NODERED.md)
 
 
 
