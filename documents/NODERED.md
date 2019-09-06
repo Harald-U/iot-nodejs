@@ -46,7 +46,7 @@ Open the Overview page of your app. Under Connections you can see one Service, a
 
 ![CF Overview](images/nodered-overview.png)
 
-Click on Runtime and Environment Variables. Here you see something Cloud Foundry specific. Cloud Foundry uses an environment variable (VCAP_SERVICES) that is injected into the container that executes the application code. The application is able to read the environment variable which contains the credentials (all the information that an application needs to access a service like URL, user, password, and such) of all bound services. If you scroll through VCAP_SERVICES you can see 2 JSON objects, one for "iotf-service" and another for "cloudantNoSQLDB" and they contain the access information for IoT Platform and Cloudant. 
+Click on Runtime and Environment Variables. Here you see something Cloud Foundry specific. Cloud Foundry uses an environment variable (VCAP_SERVICES) that is injected into the container that executes the application code. The application is able to read the environment variable which contains the credentials (all the information that an application needs to access a service like URL, user, password, and such) of all bound services. If you scroll through VCAP_SERVICES you can see a JSON object for "cloudantNoSQLDB" and it contains the access information for the Cloudant database. 
 
 ![VCAP](images/nodered-runtime.png)
 
@@ -62,30 +62,49 @@ The left part is the "Palette", the middle section is the workspace, on the righ
 
 ## Create API Key for Node-RED
 
-????????
+Node-RED needs to be able to access the IoT Platform service and in order to do that it requires an API Key.
+
+1. Go back to the IBM Cloud Dashboard and in the burger menu select "Resource List".
+
+2. Open the "Cloud Foundry Services" section and click on your IoT Platform service. Click on the name (which is a link)!
+
+3. Click on "Launch" to open the IoT Platform dashboard.
+
+4. Open the "Apps" section in the left menu, the click on "+ Generate API Key"
+    ![Gen API](images/iotp-api-key.png)
+
+5. Enter a description (e.g. "Node-RED") and click "Next".
+
+6. Leave the role "Visualisation Application", this gives access to live data.
+
+7. Click "Generate Key" and make a copy of the API Key and especially the Authentication Token, this cannot be recovered later!
+![API Key](images/api-key.png)
 
 
 ## Create a flow
 
 You are now ready to create your first "flow".  
 
-1. From the "input" section of the palette drag and drop a blie "ibmiot" node to the workspace.
+1. From the "input" section of the palette drag and drop a blue "ibmiot" node to the workspace.
 
 2. From the "output" section of the palette drag and drop a green "debug" node to the workspace and place it to the right of the "ibmiot" node".
 
 3. Both nodes have a grey I/O "port" (grey squares with rounded corners), the "ibmiot" node on the right side (this is an output), the "debug" node on the left side (this is an input). If you move the cross shaped cursor directly over an I/O port, its color changes to orange. At that moment you click the left mouse button, then you can draw a wire connection to another I/O port while holding the mouse botton. When you reach the other I/O port, release the mouse button. Using this method connect the "ibmiot" node with the "debug" node:
 ![1stFlow](images/FirstFlow.png)
 
-4. Double click the "ibmiot" node, this opens the Properties dialog. 
+4. Double click the "ibmiot" node, this opens the Properties dialog. Authentication is "API Key". Click the "Edit" symbol to the right of "Add new ibmiot...".
 
-5. Authentication is "Bluemix Service". IBM Cloud was called IBM Bluemix initially. "Bluemix Service"means that Node-RED is getting the IoT Platform credentials from the VCAP_SERVICES environment variable.
+5. The properties dialog of "Add new ibmiot config node" opens. Enter a name, the API Key, and the Authentication Token. We have created a keythis in the section [Create API Key for Node-RED](#Create-API-Key-for-Node-RED). Server name is your IoTP Org ID (see config.json in the iot-app directory) followed by ".messaging.internetofthings.ibmcloud.com". "Add" the config node.
+![iotp config node](images/iotp-config-node.png)
+
+6. Back in the "Edit ibmiot node" dialog:
 Input type should remain "Device Event", we use an event topic in the simulator code.
-Enter the name of your "Device Type", select "All" for ID and Event, "json" for Format. Click "Done" then "Deploy". 
-![Properties](images/Properties.png)
+Enter the name of your "Device Type", select "All" for ID, enter the Event, "json" for Format (again, this can be found in the config.json file in iot-app). Click "Done" then "Deploy". 
+![Properties](images/ibmiot-node.png)
 
-6. If your node.js simulator is stopped, start it again (npm start).
+7. If your node.js simulator is stopped, start it again (npm start).
 
-7. In the right window section, open the Debug view ("bug" icon). You should see the MQTT messages coming in:
+8. In the right window section, open the Debug view ("bug" icon). You should see the MQTT messages coming in:
 ![Debug View](images/DebugInfoMQTT.png)
 
  We now have a full MQTT chain: a (simulated)  device is sending sensor data (temperature and humidity) via MQTT to an MQTT Broker (IoT Platform), and an application is subscribing to this data and displaying it. 
