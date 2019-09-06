@@ -7,6 +7,9 @@ var temp1 = [15,17,18.5,20,21.5,23,24,22.2,19,18];
 var humidity1 = [50,55,61,68,65,60,53,49,45,47];
 // Counter to select from array.
 var counter1 = 0;
+// Location of DHBW Paulinenstr. 50
+var lat=48.7729543;
+var long=9.1677613;
 
 var host="mqtt://"+localCfg.ORG+".messaging.internetofthings.ibmcloud.com";
 console.log("URL: "+host);
@@ -28,7 +31,6 @@ client.on("error",function(error){
 
 var topic="iot-2/evt/"+localCfg.EVENT+"/fmt/json";
 console.log("Topic: "+topic);
-var message="{\"d\": {\"message\": \"Hello World\"}}";
 
 //publish every 5 secs
 var timer_id=setInterval(function(){publish();},5000);
@@ -40,6 +42,8 @@ function publish(){
         d:{
           "temp" : temp1[counter1],
           "humidity" : humidity1[counter1],
+          "latitude" : lat,
+          "longitude" : long
             }
       }
     );
