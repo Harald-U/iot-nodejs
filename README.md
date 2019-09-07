@@ -2,6 +2,8 @@
 
 In this workshop you learn to use the IBM IoT Platform, a cloud-based MQTT Broker, and Node-RED, a graphical flow-based programming tool  very well suited for IoT projects. You are going to simulate a Thing = IoT device on your workstation with the use of a little Node.js app.
 
+![node-red](documents/images/node-red.png)
+
 ## Prerequisites
 
 ### IBM Cloud Account

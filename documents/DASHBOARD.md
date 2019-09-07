@@ -40,10 +40,10 @@ In the dialog, click "Install" again.
    * Rule 2: "set" "msg.payload" = "a/z temp"
 ![Change](images/change-node.png)  
 
-14. Connect chart with change, and change with ibmiot. Then "Deploy".
+14. Connect "chart" with "change", and "change" with "ibmiot". Then "Deploy".
+![flow](images/flow.png)
 
 15. Open the "dashboard" tab in the right windows (info, debug, dashboard):
-![dashboard layout](images/dashboard-layout.png)
 Click on the URL icon (arrow)
 
 16. You see a dashboard similar to this;
