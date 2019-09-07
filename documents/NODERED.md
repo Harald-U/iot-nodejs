@@ -118,8 +118,7 @@ Cloudant is a NoSQL database. It is a commercial database service offering in th
 Have a look at the Cloudant dashboard:
 
 1. In the Resource List, open the Cloud Foundry Services and the Services section. You will see a Cloudant service in each of them, but the service in the Cloud Foundry Service section has a link symbol. When you hover your mouse pointer over the link symbol you'll see that it is an alias. IBM Cloud needs the alias to bind it to the Cloud Foundry app.
-
-![Cloudant in Resource List](media/Cloudant.png)
+![Cloudant in Resource List](images/Cloudant.png)
 
 2. Click on the name of the Cloudant service in the Services section (non alias). This opens the Manage Cloudant view with additional details. In here click on "Launch Cloudant Dashboard".
 
@@ -130,8 +129,7 @@ Have a look at the Cloudant dashboard:
 5. In the palette, scroll down to the "storage" section.
 
 6. There are 2 Cloudant nodes. One is a node for searching documents (input and output port), the other is a simple Cloudant output node (which only has an input). Drag this out node to your workspace somewhere under the debug node, connect it with the ibmiot node, and double click it to open the Properties dialog.
-
-![Cloudant Properties](media/CloudantProperties.png)
+![Cloudant Properties](images/CloudantProperties.png)
 
 7. The Service field already shows the name of the Cloudant alias.
 Enter a name for the database, e.g. "iot-data". Click Done, then Deploy.
@@ -139,23 +137,8 @@ Make sure your simulator is still running!
 
 8. Go back to the database view of the Cloudant dasboard. You will see a database "iot-data" that hasn't been there before. It should indicate that it already contains some records. Open it.
 It looks kind of cryptic, Cloudant is automatically creating Id's for us. If you open one of the records, the data should look familiar, though. Every bit of information the IoT Platform, the MQTT Broker, provides is there. The "_id" and "_rev" fields are Cloudant internal.
-
-![Cloudant IoT Data](media/CloudantIoTData.png)
+![Cloudant IoT Data](images/CloudantIoTData.png)
 
 This was a very simple way to store IoT data. You would use this if you need to archive historical data or use an anlytics or machine learning tool to further analyse the data.
 
-### Display IoT data in a Node-RED dashboard
-
-Node-RED can be extended very easily. There is a large community of contributors that provide extensions, you can find them [here](https://flows.nodered.org/?num_pages=1). 
-
-Try and search for the term "dashboard" in the Node-RED Library and only search for nodes. At the tme of this writing I found 25 entries! There is one called "node-red-dashboard". If you look at its contributors you'll see Dave Conway-Johnes and Nick O'Leary among them. They are the ones who started Node-RED.
-
-Installation of this dashboard is actually quite simple:
-
-1. Go to the Node-RED editor view.
-
-2. Open the Hamburger menu in the top right corner.
-
-3. Select "Manage Palette", the "Install", search for "dashboard".
-
-4. Click the "Install" button for "node-red-dashboard". 
+__Continue with [Dashboard ](DASHBOARD.md)__   
