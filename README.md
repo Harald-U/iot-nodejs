@@ -26,6 +26,7 @@ __Continue here:__
 1. [IBM Cloud Internet of Things Platform Service](documents/IOTP.md)
 2. [IoT Simulator](documents/APP.md)
 3. [Node-RED on IBM Cloud](documents/NODERED.md)
+4. [Display data in the Node-RED Dashboard](documents/DASHBOARD.md)
 
 
 
