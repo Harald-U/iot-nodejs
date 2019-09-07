@@ -25,7 +25,7 @@ $ npm -v
 
 Result is the version of both executables.
 
-__Continue here:__
+__Follow these topics in order please:__
 
 1. [IBM Cloud Internet of Things Platform Service](documents/IOTP.md)
 2. [IoT Simulator](documents/APP.md)
