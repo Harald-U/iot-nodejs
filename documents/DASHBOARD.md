@@ -55,21 +55,25 @@ In the dialog, click "Install" again.
       This is what we accomplish with the "change" node:
 
      * "Name" should be "Temperature"
-     * Rule 1: "set" "msg.payload" = "msg.payload.d.temp" (you get this variable when you click on the ">_" behind temperature in the debug window)
+     * Rule 1: "set" "msg.payload" = "msg.payload.d.temp" (you get this variable when you click on the ">_" behind tempe in the debug window)
      * "+ add" a second rule
-     * Rule 2: "set" "msg.payload" = "a/z temp"
+     * Rule 2: "set" "msg.topic" = "a/z temp"
 
     ![Change](images/change-node.png)  
 
 14. Connect "chart" with "change" (Temperature), and "change" with "ibmiot". Then "Deploy".
-![flow](images/flow.png)
+
+    ![flow](images/flow.png)
 
 15. Open the "dashboard" tab in the right windows (info, debug, dashboard).
 Click on the URL icon (arrow)
 
 16. You see a dashboard similar to this;
-![dashboard](images/dashboard.png)
+
+     ![dashboard](images/dashboard.png)
 
 17. Optional: If you want to see the humidity graph as well add a second "change" node to your flow.
 
     __Tip:__ Copy the Temperature change node (click on it once, then Ctl-C, Ctl-V)  and change it accordingly, wire it, then deploy. 
+
+Congratulations! You have completed this workshop!    
