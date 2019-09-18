@@ -64,8 +64,8 @@ In the IotP Dashboard complete the following steps to prepare  a scenario that u
 
         d. On the Summary page, verify that the information is correct and click Finish to add the device. 
          
- Make a note of the information that is displayed in the Your Device Credentials page. 
-You need the following information to configure the simulator and display the data:
+Copy or write down the information that is displayed in the Your Device Credentials page. 
+You will need the following information to configure the simulator in the next step:
 
         * Organization ID
         * Device Type
