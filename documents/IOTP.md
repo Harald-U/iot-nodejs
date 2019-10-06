@@ -72,6 +72,8 @@ You will need the following information to configure the simulator in the next s
         * Device ID
         * Authentication Token (= Password)
 
+You can find the Organization ID in the upper right corner of the IoTP Dashboard, under your User ID, it is the six characters after ID. They are also the first characters of the IoTP Dashboard URL (e.g. "https://abcdef.internetofthings.ibmcloud.com/dashboard/...").
+
 Keep this page open in your browser, but go to Recent Events or State. They will be empty for now.
 
 __Continue with [IoT Simulator ](APP.md)__   
