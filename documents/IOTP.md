@@ -64,13 +64,15 @@ In the IotP Dashboard complete the following steps to prepare  a scenario that u
 
         d. On the Summary page, verify that the information is correct and click Finish to add the device. 
          
- Make a note of the information that is displayed in the Your Device Credentials page. 
-You need the following information to configure the simulator and display the data:
+Copy or write down the information that is displayed in the Your Device Credentials page. 
+You will need the following information to configure the simulator in the next step:
 
         * Organization ID
         * Device Type
         * Device ID
         * Authentication Token (= Password)
+
+You can find the Organization ID in the upper right corner of the IoTP Dashboard, under your User ID, it is the six characters after ID. They are also the first characters of the IoTP Dashboard URL (e.g. "https://abcdef.internetofthings.ibmcloud.com/dashboard/...").
 
 Keep this page open in your browser, but go to Recent Events or State. They will be empty for now.
 
