@@ -22,7 +22,7 @@ Click "Launch" to open the Dashboard of the IotP Service.
 
 ## Register an IoT Device
 
-In the IotP Dashboard complete the following steps to prepare  a scenario that uses a simulated thermostat to monitor temperature and humidity of a room.
+In the IoTP Dashboard complete the following steps to prepare  a scenario that uses a simulated thermostat to monitor temperature and humidity of a room.
 
 1. IoT Platform Dashboard should be open from the last task.
 

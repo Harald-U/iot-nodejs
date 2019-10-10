@@ -6,37 +6,38 @@ Perform the following steps:
 
 Create an instance of the Starter Kit:
 
-        a. Log in to or register for IBM Cloud at https://cloud.ibm.com.
+a. Log in to or register for IBM Cloud at https://cloud.ibm.com.
 
-        b. Open the catalog by selecting the catalog tab.
+b. Open the catalog by selecting the catalog tab.
 
-        c. Select the Starter Kits category and there select the Internet of Things Platform Starter.
+c. Select the Starter Kits category and there select the Internet of Things Platform Starter.
 
-   ![Create](images/catalog-iotp.png)
+![Create](images/catalog-iotp.png)
 
-        d. On the Create a Cloud Foundry App page, select a region, then scroll down
+d. On the Create a Cloud Foundry App page, select a region, then scroll down
 
-   ![Region](images/select-region.png)
+![Region](images/select-region.png)
 
 
-        d. In the "Configure your resource" area, if you see "No org available" for the organization and/or "No space avalable" for space, go back and select another region , then try again.
-        e. Enter a unique
+e. In the "Configure your resource" area, if you see "No org available" for the organization and/or "No space avalable" for space, go back and select another region , then try again.
 
-            App Name
-            Host Name (the same as App name)
-            Domain (leave default)
+f. Enter a unique
 
-        and verify the selections  for:   
+    App Name
+    Host Name (the same as App name)
+    Domain (leave default)
 
-            Organization
-            Space
+and verify the selections  for:   
 
-        Leave the defaults for the rest.    
-       
-   ![Create](images/create-nodered.png)
-       
+    Organization
+    Space
 
-     f. Click Create.
+Leave the defaults for the rest.    
+
+![Create](images/create-nodered.png)
+
+
+g. Click Create.
 
 After the application is deployed, the Getting Started page of your new app is displayed. The status will be "starting" for a while, this will switch to "ready" or "This app is awake" once it is started.
         
