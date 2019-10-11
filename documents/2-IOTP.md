@@ -1,32 +1,18 @@
 # IBM Cloud IoT Platform Service
 
-The  IBM Cloud IoT Platform Service is a MQTT Broker "as a Service" on the IBM Cloud. 
+The  IBM Cloud IoT Platform (IoTP) Service is a MQTT Broker "as a Service" on the IBM Cloud. An instance of it has been created as part of the IoT Platform Starter in the previous part of this exercise.
 
-## Create the IoT Platform Service
+You will find the IoTP Service in the Resource list of the IBM Cloud, in the Services section. There is an IoTP Service in the Cloud Foundry Services section, too, but that is a link only:
 
-1. Logon to the [IBM Cloud](https://cloud.ibm.com)
-
-2. Click the blue "Create Resource" button
-
-3. On the left side, select 'Internet of Things', then click on the 'Internet of Things Platform tile'
-![IoTP in the Catalog](images/catalog-iotp.png)
-
-4. Give the service a name, I use my intitals and '-iotp' so I know what it is:
-![Create IoTP](images/create-iotp.png)
-Region / Organisation / Space should be filled in.
-Click 'Create'.
-
-5. The IBM Cloud Dashboard will switch to another view. Most likely it will offer switching of plans. Ignore this, we will use the 'Lite' (free) plan, it just takes a moment for the service to be created. After a minute or two refresh your browser and, if necessary, switch to the 'Manage' tab:
-![Manage IoTP](images/manage-iotp.png)
-Click "Launch" to open the Dashboard of the IotP Service.
+![iotp service](images/iotp-resourcelist.png)
 
 ## Register an IoT Device
 
+In the Resource list, click on the name of the service (e.g. Internet of Things Platform-zq), then click on the blue "LAUNCH" button to open the IoTP Dashboard.
+
 In the IoTP Dashboard complete the following steps to prepare  a scenario that uses a simulated thermostat to monitor temperature and humidity of a room.
 
-1. IoT Platform Dashboard should be open from the last task.
-
-2. Make TLS optional
+1. Make TLS optional
       
     TLS is enforced for connection security by default (good thing for a production environment) but for the sake of simplicity we are going to make TLS optional for this workshop.
 
@@ -37,7 +23,7 @@ In the IoTP Dashboard complete the following steps to prepare  a scenario that u
     ![TLS Optional](images/TLSOptional.png)
 
 
-3.   Create a device type.
+2.   Create a device type.
 
         a. From the main menu, select Devices.
 
@@ -52,7 +38,7 @@ In the IoTP Dashboard complete the following steps to prepare  a scenario that u
 
         d.  Click Finish to add the device type.
 
-4.   Add a device that uses the newly created device type
+3.   Add a device that uses the newly created device type
 
        a. Click Register Devices. The device type that you just created is displayed in the list of device types.
 
@@ -65,15 +51,10 @@ In the IoTP Dashboard complete the following steps to prepare  a scenario that u
         d. On the Summary page, verify that the information is correct and click Finish to add the device. 
          
 Copy or write down the information that is displayed in the Your Device Credentials page. 
-You will need the following information to configure the simulator in the next step:
+You will need the information to configure the simulator in the next step:
 
-        * Organization ID
-        * Device Type
-        * Device ID
-        * Authentication Token (= Password)
-
-You can find the Organization ID in the upper right corner of the IoTP Dashboard, under your User ID, it is the six characters after ID. They are also the first characters of the IoTP Dashboard URL (e.g. "https://abcdef.internetofthings.ibmcloud.com/dashboard/...").
+![Credentials](images/iotp-device-credentials.png)
 
 Keep this page open in your browser, but go to Recent Events or State. They will be empty for now.
 
-__Continue with [IoT Simulator ](APP.md)__   
+__Continue with [IoT Simulator ](3-APP.md)__   

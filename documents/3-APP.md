@@ -18,7 +18,7 @@ We use some simple Node.js code in this repository to connect to the IoT Platfor
     ```
     $ cp template.config.json config.json
    ```
-   Edit config.json and add the info from the Device Credentials of the IoT Platform (leave the quotes "" around the values!)
+   Edit config.json and add the info from the Device Credentials of the IoT Platform (JSON, leave the quotes "" around the values!)
    * Org 
    * Device Type
    * Device ID
@@ -33,7 +33,7 @@ We use some simple Node.js code in this repository to connect to the IoT Platfor
        "DEVICE_TYPE":"simulator",
        "DEVICE_ID":"sim-1",
        "PASSWORD":"Passw0rd",
-      "EVENT":"dhbw"
+       "EVENT":"dhbw"
     }
    ```
 
@@ -72,4 +72,4 @@ We use some simple Node.js code in this repository to connect to the IoT Platfor
     ![MQTT Received](images/MQTTMessages.png)
     
 
-__Continue with [Node-RED on IBM Cloud](NODERED.md)__   
+__Continue with [Node-RED on IBM Cloud](4-NODERED.md)__   

@@ -2,6 +2,12 @@
 
 In the IBM Cloud Dashboard create an instance of the [Internet of Things Platform Starter](https://cloud.ibm.com/docs/IoT-starter?topic=iot-starter-gettingstartedtemplate#gettingstartedtemplate).
 
+The starter includes:
+
+* Node-RED running as a Cloud Foundry application
+* Cloudant DB (NoSQL) as persistence storage for Node-RED
+* Internet of Things Platform, our MQTT Borker
+
 Perform the following steps:
 
 a. Log in to or register for IBM Cloud at https://cloud.ibm.com.
@@ -107,7 +113,7 @@ Open the Overview page of your app. Under Connections you can see two services, 
 
 ![CF Overview](images/nodered-overview.png)
 
-Click on Runtime and Environment Variables. Here you see something Cloud Foundry specific. Cloud Foundry uses an environment variable (VCAP_SERVICES) that is injected into the container that executes the application code. The application is able to read the environment variable which contains the credentials (all the information that an application needs to access a service like URL, user, password, and such) of all bound services. If you scroll through VCAP_SERVICES you can see a JSON object for "iotf-service" and another JSON object for "cloudantNoSQLDB", they contain the access information for the services. Cloud Foundry Apps read the VCAP_SERVICES environment variable during startup and then have the access credentials to those services.
+Click on Runtime and Environment Variables. Here you see something Cloud Foundry specific. Cloud Foundry uses an environment variable (VCAP_SERVICES) that is injected into the container that executes the application code. The application is able to read the environment variable which contains the credentials (all the information that an application needs to access a service like URL, user, password, and such) of all bound services. If you scroll through VCAP_SERVICES you can see a JSON object for "iotf-service" and another JSON object for "cloudantNoSQLDB", they contain the access information for the services. 
 
 ![VCAP](images/nodered-runtime.png)
 
@@ -123,5 +129,6 @@ The left part is the "Palette", the middle section is the workspace, on the righ
 
 We will leave the example on "Flow 1" but need to deactivate the two active Debug nodes: click on the slider on the right side of the node, the slider will "move in" a bit, its color will turn from green to grey, a blue dot will appear at the nodes. Click the red "Deploy" button, when deployment is complete, the button will turn grey. Click on "+" to create another empty flow ("Flow 2").
 
+We will return to Node-RED later in this exercise.
 
-__Continue with [XXX ](XXX.md)__   
+__Continue with [IBM Cloud IoT Platform Service ](2-IOTP.md)__   

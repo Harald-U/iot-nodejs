@@ -1,87 +1,13 @@
-### IBM Cloud IoT Platform Starter
+# Node-RED on IBM Cloud
 
-In the IBM Cloud Dashboard create an instance of the [Node-RED Starter](https://cloud.ibm.com/docs/starters/Node-RED?topic=starters-gettingstarted#nodered).
+In the first part of this exercise you created a Cloud Foundry app that runs Node-RED on Node.js. 
 
-Perform the following steps:
-
-1.   Create an instance of the Starter Kit:
-
-        a. Log in to or register for IBM Cloud at https://cloud.ibm.com.
-
-        b. Open the catalog by selecting the catalog tab.
-
-        c. Select the Starter Kits category and there select the Node-RED Starter.
-
-        ![Starter](images/catalog-nodered.png)
-
-        d. On the Create a Cloud Foundry App page, enter a unique
-
-            App Name
-            Host Name
-
-        and verify the selections  for:   
-
-            Region/Location
-            Organization
-            Space
-
-        Leave the defaults for the rest.    
-       
-       ![Create](images/create-nodered.png)
-
-2. Click Create to add Node-RED to your IBM Cloud organization.   
-
-After the application is deployed, the Getting Started page of your new app is displayed. The status will be "starting" for a while, this will switch to "ready" or "This app is awake" once it is started.
-        
-Note: The staging process might take a few minutes.
-
-
-## Node-RED
-
-You just created a Cloud Foundry app that runs Node-RED on Node.js. 
-
-[Node-RED](https://nodered.org/) is "_a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways._" It is a browser-based programming tool where you wire "nodes" together to form a flow and Node-RED creates node.js code from it and executes it. It has started as a simple graphical programming tool for the Internet of Things by IBMers Nick O'Leary and Dave Conway-Johnes and is now an open source project at the JS Foundation.
-
-Open the Overview page of your app. Under Connections you can see one Service, a Cloudant Database, bound to the Cloud Foundry App. Cloudant is a NoSQL database and used to store the code, Cloud Foundry apps have no persistent file system.
-
-![CF Overview](images/nodered-overview.png)
-
-Click on Runtime and Environment Variables. Here you see something Cloud Foundry specific. Cloud Foundry uses an environment variable (VCAP_SERVICES) that is injected into the container that executes the application code. The application is able to read the environment variable which contains the credentials (all the information that an application needs to access a service like URL, user, password, and such) of all bound services. If you scroll through VCAP_SERVICES you can see a JSON object for "cloudantNoSQLDB" and it contains the access information for the Cloudant database. 
-
-![VCAP](images/nodered-runtime.png)
-
-Now click on "Visit App URL" .
-
-When you start Node-RED on the IBM Cloud for the first time you are asked to secure the editor. This is a good thing otherwise it would be accessible to everybody on the Internet. Secure it by entering a Username and Password (which you should be able to remember!) A certain level of password complexity is required otherwise you can't continue. Finish the setup and wait for a generic Node-RED page to appear. Click on "Go to your Node-RED flow editor". It will ask for your Username and Password. 
-
-Node-RED will open with an empty "flow":
+If Node-RED isn't still open in your browser from part 1,  open the app from the Resource list of IBM Cloud, then click on "Visit App URL" .
 
 ![NodeRED](images/nodered-editor.png)
 
-The left part is the "Palette", the middle section is the workspace, on the right you can see different types of information, default is to open up in the "Information" view.
 
-## Create API Key for Node-RED
-
-Node-RED needs to be able to access the IoT Platform service and in order to do that it requires an API Key.
-
-1. Go back to the IBM Cloud Dashboard and in the burger menu select "Resource List".
-
-2. Open the "Cloud Foundry Services" section and click on your IoT Platform service. Click on the name (which is a link)!
-
-3. Click on "Launch" to open the IoT Platform dashboard.
-
-4. Open the "Apps" section in the left menu, the click on "+ Generate API Key"
-
-    ![Gen API](images/iotp-api-key.png)
-
-5. Enter a description (e.g. "Node-RED") and click "Next".
-
-6. Leave the role "Visualisation Application", this gives access to live data.
-
-7. Click "Generate Key" and make a copy of the API Key and especially the Authentication Token, this cannot be recovered later!
-  
-    ![API Key](images/api-key.png)
-
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ## Create a flow
 

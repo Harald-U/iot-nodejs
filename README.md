@@ -27,10 +27,11 @@ Result is the version of both executables.
 
 __Follow these topics in order please:__
 
-1. [IBM Cloud Internet of Things Platform Service](documents/IOTP.md)
-2. [IoT Simulator](documents/APP.md)
-3. [Node-RED on IBM Cloud](documents/NODERED.md)
-4. [Display data in the Node-RED Dashboard](documents/DASHBOARD.md)
+1. [IBM Cloud IoT Platform Starter](documents/1-IoT-Starter.md)
+2. [IBM Cloud IoT Platform Service](documents/2-IOTP.md)
+3. [IoT Simulator](documents/3-APP.md)
+4. [Node-RED on IBM Cloud](documents/4-NODERED.md)
+5. [Display data in the Node-RED Dashboard](documents/5-DASHBOARD.md)
 
 
 
