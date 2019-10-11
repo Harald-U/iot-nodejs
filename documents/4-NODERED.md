@@ -6,8 +6,7 @@ If Node-RED isn't still open in your browser from part 1,  open the app from the
 
 ![NodeRED](images/nodered-editor.png)
 
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+At the end of part 1 of this exercise, you have deactivated the two active Debug nodes in the example in Flow 1 (click on the slider on the right side of the node, the slider will "move in" a bit, its color will turn from green to grey, a blue dot will appear at the nodes.)   Then you created another empty flow ("Flow 2") by clicking on the "+". If the "Deploy" button should be red (indicating that there is something to deploy), click it now.
 
 ## Create a flow
 
@@ -29,19 +28,11 @@ You are now ready to create your first "flow".
 
 5. The properties dialog of "Add new ibmiot config node" opens. 
 
-   Enter a name, the API Key, and the Authentication Token. We have created a keythis in the section [Create API Key for Node-RED](#Create-API-Key-for-Node-RED). 
+   Select "Bluemix Service" for Authentication. Bluemix was the former name of the IBM Cloud, and Bluemix Service means we are using a IoTP Service bound the the Cloud FOundry app.
    
-   Server name is your IoTP Org ID (see config.json in the iot-app directory) followed by ".messaging.internetofthings.ibmcloud.com". 
-   
-   "Add" the config node.
+   Input type should remain "Device Event", we use an event topic in the simulator code.
 
-   ![iotp config node](images/iotp-config-node.png)
-
-6. Back in the "Edit ibmiot node" dialog:
-
-    Input type should remain "Device Event", we use an event topic in the simulator code.
-
-    Enter the name of your "Device Type", select "All" for ID, enter the Event, "json" for Format (again, this can be found in the config.json file in iot-app). Click "Done" then "Deploy". 
+    Enter the name of your "Device Type"(e.g. "simulator"), select "All" for ID, enter the Event (e.g. "dhbw"), "json" for Format (again, this can be found in the config.json file in iot-app). Click "Done" then "Deploy". 
 
     ![Properties](images/ibmiot-node.png)
 
@@ -69,7 +60,7 @@ Have a look at the Cloudant dashboard:
 
 2. Click on the name of the Cloudant service in the Services section (non alias). 
 
-   This opens the Manage Cloudant view with additional details. In here click on "Launch Cloudant Dashboard".
+   This opens the Manage Cloudant view with additional details. In the Manage section click on "Launch Cloudant Dashboard".
 
 3. The Databases view of the Cloudant dashboard opens and you should see a database "nodered". This database holds Node-RED information. Have a look at it but do not change anything, it would most likely destroy your Node-RED instance.
 
@@ -101,4 +92,4 @@ Have a look at the Cloudant dashboard:
 
 This was a very simple way to store IoT data. You would use this if you need to archive historical data or use an anlytics or machine learning tool to further analyse the data.
 
-__Continue with [Dashboard ](DASHBOARD.md)__   
+__Continue with [Node-RED Dashboard ](5-DASHBOARD.md)__   
