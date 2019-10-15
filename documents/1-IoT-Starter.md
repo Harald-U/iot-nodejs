@@ -57,7 +57,11 @@ We may need to fix something before the app is able to start. Open the "Logs" pa
 
 ![Logs](images/iotp-logs.png)
 
-Scroll down in the log and check if you see a "Failed to compile droplet" error. The message above it will then most likely show that there is no version 6.x in the Node.js buildpack. Maybe this issue is fixed by the time you run this exercise and your app will start as expected without issues. But if you see this error, the app __will not be able to start__ and we will need to fix it ourselves.
+Scroll down in the log and check if you see a "Failed to compile droplet" error. The message above it will then most likely show that there is no version 6.x in the Node.js buildpack. 
+
+What happens: The Node.js buildpack supports multiple Node.js versions. The developer of a Node.js application can specify a specific Node.js version in the package.json file. In our case the Node-RED application of the Starter App requests Node.js version 6. But version 6 support has recently been removed from the Node.js buildpack, minimum is now version 8, that is the reason why the Starter App cannot start.
+
+Maybe this issue is fixed by the time you run this exercise and your app will start as expected without issues. But if you see this error, the app __will not be able to start__ and we will need to fix it ourselves.
 
 ---
 ### The app doesn't start! Changing the Node.js version of the starter app
