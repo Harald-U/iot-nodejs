@@ -24,11 +24,9 @@ You are now ready to create your first "flow".
 
     ![1stFlow](images/FirstFlow.png)
 
-4. Double click the "ibmiot" node, this opens the Properties dialog. Authentication is "API Key". Click the "Edit" symbol to the right of "Add new ibmiot...".
+4. Double click the "ibmiot" node, this opens the Properties dialog. 
 
-5. The properties dialog of "Add new ibmiot config node" opens. 
-
-   Select "Bluemix Service" for Authentication. Bluemix was the former name of the IBM Cloud, and Bluemix Service means we are using a IoTP Service bound the the Cloud FOundry app.
+5. Select "Bluemix Service" for Authentication. Bluemix was the former name of the IBM Cloud, and Bluemix Service means we are using a IoTP Service bound the the Cloud FOundry app.
    
    Input type should remain "Device Event", we use an event topic in the simulator code.
 
@@ -36,7 +34,7 @@ You are now ready to create your first "flow".
 
     ![Properties](images/ibmiot-node.png)
 
-7. If your node.js simulator is stopped, start it again (npm start).
+7. If your node.js simulator on your workstation (previous section) is stopped, start it again (npm start).
 
 8. In the right window section, open the Debug view ("bug" icon). You should see the MQTT messages coming in:
 
@@ -58,7 +56,7 @@ Have a look at the Cloudant dashboard:
 
    ![Cloudant in Resource List](images/Cloudant.png)
 
-2. Click on the name of the Cloudant service in the Services section (non alias). 
+2. Click on the name of the Cloudant service (e.g. Cloudant-mq) in the Services section (non alias). 
 
    This opens the Manage Cloudant view with additional details. In the Manage section click on "Launch Cloudant Dashboard".
 
