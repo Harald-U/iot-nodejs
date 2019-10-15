@@ -84,7 +84,7 @@ The result looks like this:
 
 The system created a Git Repository for issues and code, a "delivery pipeline", and an Eclipse Orion Web IDE.
 
-Click on IDE, select the file "package.json":
+Click on Eclipse Orion Web IDE, and in the IDE select the file "package.json":
 
 ![package.json](images/package-json.png)
 
